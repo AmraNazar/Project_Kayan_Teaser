@@ -58,23 +58,6 @@ body {
 .dot:nth-child(4) { animation-delay: 0.9s; }
 .dot:nth-child(5) { animation-delay: 1.2s; }
 
-/* .background-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translateX(-50%) translateY(-50%);
-    object-fit: cover;
-    z-index: 1;
-    opacity: 65%;  /* Increased from your previous opacity */
-   /* filter: brightness(1.2);  
-    transition: opacity 1s ease-in-out;
-    
-} */
-
 .background-video {
     position: fixed;
     top: 50%;
@@ -86,22 +69,13 @@ body {
     transform: translateX(-50%) translateY(-50%);
     object-fit: cover;
     z-index: 1;
-    opacity: 0.6;
+    opacity: 65%;  /* Increased from your previous opacity */
+    filter: brightness(1.2);  
     transition: opacity 1s ease-in-out;
-    filter: brightness(1.2) sepia(0.3) hue-rotate(160deg) saturate(1.2);
-}
+    
+} 
 
-/* Add this overlay for the teal tint */
-.background-video::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(100, 186, 178, 0.4); /* Teal color with opacity */
-    mix-blend-mode: overlay;
-}
+
 
 
 /* Main Content */
