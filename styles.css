@@ -35,7 +35,9 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    transition: opacity var(--animation-duration) ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
 .windows-loading {
@@ -68,29 +70,17 @@ body {
     transform: translateX(-50%) translateY(-50%);
     object-fit: cover;
     z-index: 1;
-    opacity: 0.6;
-    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-@media (max-aspect-ratio: 16/9) {
-    .background-video {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (min-aspect-ratio: 16/9) {
-    .background-video {
-        width: auto;
-        height: 100%;
-    }
-}
 /* Main Content */
 .main-content {
-    display: none;
+    opacity: 0;
     text-align: center;
     z-index: 2;
     position: relative;
+    transition: opacity 1s ease-in-out;
 }
 
 .project-title {
@@ -98,24 +88,12 @@ body {
     color: var(--text-color);
     letter-spacing: 0.2em;
     margin-bottom: clamp(1rem, 4vh, 3rem);
-    opacity: 0;
-    animation: fadeIn var(--animation-duration) ease forwards;
-    animation-delay: 2s;
 }
 
 .coming-soon {
     font-size: clamp(2.5rem, 6vw, 4rem);
     color: var(--text-color);
     margin-bottom: clamp(2rem, 6vh, 4rem);
-    opacity: 0;
-    animation: fadeIn var(--animation-duration) ease forwards;
-    animation-delay: 2.5s;
-}
-
-.bottom-text {
-    opacity: 0;
-    animation: fadeIn var(--animation-duration) ease forwards;
-    animation-delay: 3s;
 }
 
 .team-text {
@@ -142,13 +120,12 @@ body {
     }
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 .fade-out {
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
+}
+
+.fade-in {
+    opacity: 1;
+    visibility: visible;
 }
