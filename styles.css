@@ -58,7 +58,6 @@ body {
 .dot:nth-child(4) { animation-delay: 0.9s; }
 .dot:nth-child(5) { animation-delay: 1.2s; }
 
-/* Video Background */
 .background-video {
     position: fixed;
     top: 50%;
@@ -70,7 +69,8 @@ body {
     transform: translateX(-50%) translateY(-50%);
     object-fit: cover;
     z-index: 1;
-    opacity: 0;
+    opacity: 0.6;  /* Increased from your previous opacity */
+    filter: brightness(1.2);  /* Brightens the video */
     transition: opacity 1s ease-in-out;
 }
 
