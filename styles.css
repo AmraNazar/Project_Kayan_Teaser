@@ -197,7 +197,7 @@ body {
 }
 
 /* Add this overlay to both for enhanced clarity */
-.container::before {
+/* .container::before {
     content: '';
     position: fixed;
     top: 0;
@@ -206,7 +206,7 @@ body {
     height: 100%;
     background-color: rgba(100, 186, 178, 0.2);
     z-index: 1;
-}
+} */
 
 
 /* Main Content */
