@@ -75,7 +75,7 @@ body {
     
 }  */
 
-.background-video {
+/* .background-video {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -89,7 +89,40 @@ body {
     opacity: 0.6;
     transition: opacity 1s ease-in-out;
     filter: brightness(1.4); /* Makes the video lighter */
+/*} */
+/* Add these new styles */
+.background-fallback {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('frame.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    filter: brightness(1.4);
+    z-index: 0;
+    display: none;
 }
+
+/* Update video styles */
+.background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.6;
+    filter: brightness(1.4);
+    transition: opacity 1s ease-in-out;
+}
+
 
 /* Add a subtle overlay with your original color */
 .container::before {
